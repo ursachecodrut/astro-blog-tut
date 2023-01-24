@@ -1,0 +1,29 @@
+---
+const skills = ['HTML', 'CSS', 'JavaScript', 'React', 'Node', 'MongoDB'];
+
+const skillColor = "navy";
+---
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width=device-width">
+    <title>My Astro Site</title>
+    <style define:vars={{skillColor}}>
+      .skill {
+        color: var(--skillColor);
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My Astro Site</h1>
+    <h2>... and my new Astro site!</h2>
+
+    <ul>
+      {skills.map((skill) => (
+        <li class="skill">{skill}</li>
+      ))}
+    </ul>
+  </body>
+</html>
